@@ -1,0 +1,26 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d48u1temcj7s73e6dn00-a.oregon-postgres.render.com:5432/skillsync_db_8dnq
+    username: skillsync_db_8dnq_user
+    password: F8WlaX67oOvvFV7kk0PX15aXrA6r7hgB
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate  # Cambiado a validate para producción
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  application:
+    name: SkillSync
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG

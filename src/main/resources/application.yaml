@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d48u1temcj7s73e6dn00-a.oregon-postgres.render.com:5432/skillsync_db_8dnq
+    username: skillsync_db_8dnq_user
+    password: F8WlaX67oOvvFV7kk0PX15aXrA6r7hgB
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
