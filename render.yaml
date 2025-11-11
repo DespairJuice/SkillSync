@@ -1,11 +1,10 @@
 services:
   - type: web
     name: skillsync-backend
-    env: java
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -Dserver.port=$PORT -jar target/backend-0.0.1-SNAPSHOT.jar"
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
     healthCheckPath: /actuator/health
-    plan: starter
