@@ -1,7 +1,6 @@
 services:
   - type: web
     name: skillsync-backend
-    runtime: java
     env: java
     buildCommand: "./mvnw clean package -DskipTests"
     startCommand: "java -Dserver.port=$PORT -jar target/backend-0.0.1-SNAPSHOT.jar"
